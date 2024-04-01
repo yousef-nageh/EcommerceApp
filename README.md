@@ -2,6 +2,10 @@ The E-Commerce Mobile App brings the convenience of online shopping to your fing
 
 Secure Authentication: Users can securely log in to their accounts using their registered email address or username and password.
 
+
+https://github.com/yousef-nageh/EcommerceApp/assets/111569252/768d29b9-bab7-471b-a9ca-c45f1910dc5f
+
+
 Password Protection: Passwords are encrypted and stored securely to ensure the confidentiality of user credentials.
 
 Remember Me: Users can choose to stay logged in by selecting the "Remember Me" option, eliminating the need to log in repeatedly.
