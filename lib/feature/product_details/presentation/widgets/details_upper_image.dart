@@ -15,7 +15,6 @@ class DetailsUpperImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ProductDetailsCubit cubit =ProductDetailsCubit.getInstance(context);
-    double w=context.getWidth();
     return BlocBuilder<ProductDetailsCubit,ProductDetailsStates>(builder: (BuildContext context, state) =>Card(
       color: AppColor.white,
       surfaceTintColor: Colors.transparent,

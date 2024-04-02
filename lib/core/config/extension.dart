@@ -15,12 +15,7 @@ extension NavigateReplacementExtension on BuildContext {
       Navigator.of(this).pushReplacementNamed(pageName);
 }
 
-extension ScreenHeight on BuildContext {
-  double getHeight() => MediaQuery.sizeOf(this).height;
-}
-extension ScreenWidth on BuildContext {
-  double getWidth() => MediaQuery.sizeOf(this).width;
-}
+
 extension GetHeightRatioFromScreen on num{
   double hR()=>SizeConfig.height*this/100;
 }
