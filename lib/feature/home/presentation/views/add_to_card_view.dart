@@ -28,7 +28,7 @@ class AddToCardView extends StatelessWidget {
               ),
               body: const AddToCardViewBody(),
               bottomNavigationBar: HomeProductCubit.getInstance(context)
-                  .getCardListLength() == 0 && state is HomeAddToCardWaitingState
+                  .getCardListLength() == 0 || state is HomeAddToCardWaitingState
                   ? null
                   : const AddToCardBottomNavBar()
           );
