@@ -15,3 +15,4 @@ class LogoutErrorState extends LogoutStates{
   LogoutErrorState(this.mess);
 }
 class LogoutChangeProfileImageState extends LogoutStates {}
+class LogoutChangeCameraImageState extends LogoutStates {}
