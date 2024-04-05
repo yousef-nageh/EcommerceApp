@@ -22,7 +22,6 @@ class LogoutCubit extends Cubit<LogoutStates> {
 
   static LogoutCubit instance(BuildContext context) => BlocProvider.of(context);
   File ? image;
-  File ? CameraImage;
   final imagePiker=ImagePicker();
  Future<void>  setProfileImage()async{
    var selectedImage= await imagePiker.pickImage(source: ImageSource.gallery);
@@ -31,21 +30,16 @@ class LogoutCubit extends Cubit<LogoutStates> {
      emit(LogoutChangeProfileImageState());
    }
  }
-  Future<void>  setCameraImage()async{
-    var selectedImage= await imagePiker.pickImage(source: ImageSource.camera);
-    if(selectedImage !=null){
-      CameraImage =File(selectedImage.path);
-      emit(LogoutChangeCameraImageState());
-    }
-  }
   ImageProvider getProfileImage(){
    if(image != null){
      return FileImage(image!);
 
-   }else if(CameraImage != null){
-     return FileImage(CameraImage!);
    }
-   return  CachedNetworkImageProvider(AppImage.profile, );
+   return  CachedNetworkImageProvider(AppImage.profile, errorListener: (value){
+
+value=const Icon(Icons.info);
+
+   });
   }
   List<IconData> profileIcon = [
     IconBroken.Profile,

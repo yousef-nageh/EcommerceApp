@@ -24,13 +24,13 @@ class SearchViewBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kPadding),
           child: MyTextForm(
             onChanged: (text){
-              SearchProductCubit.getInstance(context).postSearchData(text);
+              SearchProductCubit.getInstance(context).postSearchData();
             },
 
               hintText: AppString.searchHintText,
               labelText: AppString.searchLabelText,
               prefixIcon: IconBroken.Search,
-              keyboardType: TextInputType.number),
+              keyboardType: TextInputType.text),
         ),
 
         ),

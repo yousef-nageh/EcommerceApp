@@ -7,7 +7,7 @@ abstract class SearchProductStates {}
 class SearchProductInitial extends SearchProductStates {}
 class SearchProductWaitingState extends SearchProductStates{}
 class SearchProductSuccessState extends SearchProductStates{
-  final List<ProductListData>  model;
+  final ProductModel model;
 
   SearchProductSuccessState(this.model);
 }
